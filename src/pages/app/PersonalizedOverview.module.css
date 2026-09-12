@@ -1,0 +1,293 @@
+.badge {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: #fdfbf8;
+  border: 1px solid #ede9e1;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #6b6459;
+}
+
+.title {
+  margin: 0 0 4px;
+  font-family: 'Figtree', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  color: #000000;
+}
+
+.description {
+  margin: 0 0 24px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #000000;
+}
+
+.statRow {
+  display: flex;
+  gap: 12px;
+  margin: 24px 0 32px;
+}
+
+.statItem {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 16px 12px;
+  border: 1px solid #ede9e1;
+  border-radius: 14px;
+  text-align: center;
+}
+
+.statIcon {
+  display: flex;
+  color: #ff3f00;
+}
+
+.statLabel {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #a39c8a;
+}
+
+.statValue {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  color: #000000;
+}
+
+/* ── Course progress bar ─────────────────────────────────────────────*/
+
+.progressBlock {
+  margin-bottom: 32px;
+}
+
+.progressHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.progressPercent {
+  font-size: 13px;
+  font-weight: 700;
+  color: #ff3f00;
+}
+
+.progressTrack {
+  width: 100%;
+  height: 8px;
+  border-radius: 999px;
+  background: #ede9e1;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  border-radius: 999px;
+  background: #ff3f00;
+  transition: width 0.3s ease;
+}
+
+/* ── Module / lesson list ────────────────────────────────────────────*/
+
+.moduleList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.moduleCard {
+  border: 1px solid #ede9e1;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.moduleHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  padding: 14px 16px;
+  border: none;
+  background: #ffffff;
+  text-align: left;
+  cursor: pointer;
+}
+
+.moduleHeaderText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.moduleEyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #a39c8a;
+}
+
+.moduleTitle {
+  font-size: 14px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.chevron,
+.chevronOpen {
+  display: flex;
+  flex-shrink: 0;
+  color: #a39c8a;
+  transition: transform 0.2s ease;
+}
+
+.chevronOpen {
+  transform: rotate(90deg);
+  color: #ff3f00;
+}
+
+.lessonList {
+  list-style: none;
+  margin: 0;
+  padding: 4px 16px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-top: 1px solid #f3f0ea;
+}
+
+.lessonItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 10px;
+  font-size: 13px;
+  color: #1c1a17;
+}
+
+.lessonIcon,
+.lessonIconDone {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+}
+
+.lessonIcon {
+  background: #f3f0ea;
+}
+
+.lessonIconDone {
+  background: #ff3f00;
+  color: #ffffff;
+}
+
+.lessonDot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #beb7a4;
+}
+
+.lessonTitle {
+  flex: 1;
+  font-weight: 600;
+}
+
+.lessonDuration {
+  flex-shrink: 0;
+  font-size: 12px;
+  color: #a39c8a;
+}
+
+.sectionTitle {
+  margin: 0 0 14px;
+  font-family: 'Figtree', sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  color: #000000;
+}
+
+.listBlock {
+  margin-bottom: 32px;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.listItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #1c1a17;
+}
+
+.listItemIcon {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  margin-top: 1px;
+  border-radius: 50%;
+  background: rgba(255, 63, 0, 0.1);
+  color: #ff3f00;
+}
+
+.listItemDot {
+  flex-shrink: 0;
+  width: 6px;
+  height: 6px;
+  margin-top: 8px;
+  border-radius: 50%;
+  background: #ff7f11;
+}
+
+.continueButton {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 999px;
+  background: #ff3f00;
+  color: #ffffff;
+  font-family: 'Figtree', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  transition: background 0.15s ease;
+}
+
+.continueButton:hover {
+  background: #ff7f11;
+}
+
+@media (max-width: 480px) {
+  .statRow {
+    flex-direction: column;
+  }
+}

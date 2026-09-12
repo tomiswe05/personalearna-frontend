@@ -1,0 +1,182 @@
+.page {
+  min-height: 100svh;
+  background: #fffffc;
+  font-family: 'Figtree', sans-serif;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 20px 32px;
+  border-bottom: 1px solid #ede9e1;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #ff3f00;
+}
+
+.content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.title {
+  margin: 0;
+  font-family: 'Figtree', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #000000;
+}
+
+.addButton {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 999px;
+  background: #ff3f00;
+  color: #ffffff;
+  font-family: 'Figtree', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.addButton:hover {
+  background: #ff7f11;
+}
+
+/* ── Children grid ──────────────────────────────────────────────────── */
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 18px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 28px 16px;
+  border: 1px solid #ede9e1;
+  border-radius: 18px;
+  background: #ffffff;
+  cursor: pointer;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.card:hover {
+  border-color: #d9d2c4;
+  transform: translateY(-1px);
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.name {
+  font-weight: 700;
+  font-size: 15px;
+  color: #000000;
+}
+
+/* ── Empty state ────────────────────────────────────────────────────── */
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 64px 24px;
+  border: 1px dashed #ede9e1;
+  border-radius: 20px;
+}
+
+.emptyIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 16px;
+  border-radius: 50%;
+  background: #fdfbf8;
+  color: #a39c8a;
+}
+
+.emptyTitle {
+  margin: 0 0 6px;
+  font-family: 'Figtree', sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  color: #000000;
+}
+
+.emptySubtitle {
+  margin: 0 0 20px;
+  max-width: 320px;
+  font-size: 14px;
+  color: #6b6459;
+}
+
+.emptyButton {
+  padding: 12px 22px;
+  border: none;
+  border-radius: 999px;
+  background: #ff3f00;
+  color: #ffffff;
+  font-family: 'Figtree', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.emptyButton:hover {
+  background: #ff7f11;
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 16px 20px;
+  }
+
+  .content {
+    padding: 32px 16px;
+  }
+
+  .titleRow {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
+
+  .addButton {
+    justify-content: center;
+  }
+}

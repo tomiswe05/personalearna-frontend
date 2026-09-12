@@ -1,0 +1,235 @@
+.page {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px;
+  background: #fffffc;
+  font-family: 'Figtree', sans-serif;
+}
+
+.card {
+  width: 100%;
+  max-width: 460px;
+}
+
+.brand {
+  position: absolute;
+  top: 32px;
+  left: 32px;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #ff3f00;
+}
+
+.title {
+  margin: 0 0 8px;
+  text-align: center;
+  font-family: 'Figtree', sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  color: #000000;
+}
+
+.subtitle {
+  margin: 0 0 32px;
+  text-align: center;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #6b6459;
+}
+
+/* ── Role picker step ──────────────────────────────────────────────── */
+
+.roleGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.roleCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px 18px;
+  border: 1.5px solid #ede9e1;
+  border-radius: 14px;
+  background: #ffffff;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background 0.2s ease, transform 0.15s ease;
+}
+
+.roleCard:hover {
+  border-color: #d9d2c4;
+  transform: translateY(-1px);
+}
+
+.roleCardSelected {
+  border-color: #ff3f00;
+  background: #fff6f2;
+  animation: rolePulse 0.3s ease;
+}
+
+@keyframes rolePulse {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.roleDot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  border-radius: 50%;
+  border: 1.5px solid #d9d2c4;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.roleCardSelected .roleDot {
+  border-color: #ff3f00;
+  background: #ff3f00;
+}
+
+.roleDotInner {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ffffff;
+  transform: scale(0);
+  transition: transform 0.2s ease;
+}
+
+.roleCardSelected .roleDotInner {
+  transform: scale(1);
+}
+
+.roleLabel {
+  margin: 0 0 2px;
+  font-weight: 700;
+  font-size: 15px;
+  color: #000000;
+}
+
+.roleDescription {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.4;
+  color: #6b6459;
+}
+
+.roleBadge {
+  display: inline-flex;
+  margin: 0 0 20px;
+  padding: 6px 14px;
+  border: none;
+  border-radius: 999px;
+  background: #ede9e1;
+  color: #6b6459;
+  font-family: 'Figtree', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.roleBadge:hover {
+  background: #e0dbcf;
+  color: #000000;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.input {
+  width: 100%;
+  padding: 14px 18px;
+  border-radius: 999px;
+  border: 1px solid #d1d5db;
+  background: #fffffc;
+  font-size: 15px;
+  color: #000000;
+  outline: none;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.input::placeholder {
+  color: #a39c8a;
+}
+
+.input:focus {
+  border-color: #ff7f11;
+  background: #ffffff;
+}
+
+.error {
+  margin: 0;
+  font-size: 13px;
+  color: #ff3f00;
+  text-align: center;
+}
+
+.submit {
+  margin-top: 8px;
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 999px;
+  background: #ff3f00;
+  color: #ffffff;
+  font-family: 'Figtree', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  transition: background 0.15s ease;
+}
+
+.submit:hover {
+  background: #ff7f11;
+}
+
+.submit:disabled {
+  background: #beb7a4;
+  cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+  .brand {
+    top: 20px;
+    left: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 24px;
+  }
+}
+

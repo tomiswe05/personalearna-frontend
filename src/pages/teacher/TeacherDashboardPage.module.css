@@ -1,0 +1,448 @@
+.page {
+  min-height: 100svh;
+  background: #fffffc;
+  font-family: 'Figtree', sans-serif;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 20px 32px;
+  border-bottom: 1px solid #ede9e1;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #ff3f00;
+}
+
+.content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.title {
+  margin: 0;
+  font-family: 'Figtree', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #000000;
+}
+
+.actionsRight {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.inviteLink {
+  border: none;
+  background: none;
+  padding: 4px 0;
+  color: #6b6459;
+  font-family: 'Figtree', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+
+.inviteLink:hover {
+  color: #000000;
+  text-decoration: underline;
+}
+
+.uploadButton {
+  padding: 12px 22px;
+  border: none;
+  border-radius: 999px;
+  background: #ff3f00;
+  color: #ffffff;
+  font-family: 'Figtree', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.uploadButton:hover {
+  background: #ff7f11;
+}
+
+/* ── Stat strip ─────────────────────────────────────────────────────── */
+
+.statRow {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.statItem {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 16px 12px;
+  border: 1px solid #ede9e1;
+  border-radius: 14px;
+  text-align: center;
+}
+
+.statIcon {
+  display: flex;
+  color: #ff3f00;
+}
+
+.statLabel {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #a39c8a;
+}
+
+.statValue {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #000000;
+}
+
+/* ── Roster grid ────────────────────────────────────────────────────── */
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 18px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 20px;
+  border: 1px solid #ede9e1;
+  border-radius: 16px;
+  background: #ffffff;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.card:hover {
+  border-color: #d9d2c4;
+  transform: translateY(-1px);
+}
+
+.cardHead {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fff6f2;
+  color: #ff3f00;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.name {
+  font-weight: 700;
+  font-size: 15px;
+  color: #000000;
+}
+
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 5px;
+  padding: 3px 9px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.statusDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.statusDone {
+  background: #e6f7ef;
+  color: #1f9d68;
+}
+
+.statusDone .statusDot {
+  box-shadow: 0 0 0 4px rgba(31, 157, 104, 0.18);
+}
+
+.statusInProgress {
+  background: #fff3e9;
+  color: #ff7f11;
+}
+
+.statusInProgress .statusDot {
+  box-shadow: 0 0 0 4px rgba(255, 127, 17, 0.18);
+}
+
+.statusNotStarted {
+  background: #fdfbf8;
+  border: 1px solid #ede9e1;
+  color: #a39c8a;
+}
+
+.statusNotStarted .statusDot {
+  box-shadow: 0 0 0 4px rgba(163, 156, 138, 0.18);
+}
+
+.cardFraction {
+  margin: 0;
+  font-size: 12px;
+  color: #6b6459;
+}
+
+/* ── Meter (Class Completion) ──────────────────────────────────────── */
+
+.meterBlock {
+  margin-bottom: 32px;
+}
+
+.meterHeadRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.meterLabel {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: #6b6459;
+}
+
+.meterValue {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.meterTrack {
+  width: 100%;
+  height: 10px;
+  border-radius: 999px;
+  background: #ffe9e1;
+  overflow: hidden;
+}
+
+.meterFill {
+  height: 100%;
+  border-radius: 999px;
+  background: #ff3f00;
+  transition: width 0.3s ease;
+}
+
+/* ── Completion-by-student chart ───────────────────────────────────── */
+
+.chartBlock {
+  margin-bottom: 36px;
+  padding: 20px;
+  border: 1px solid #ede9e1;
+  border-radius: 16px;
+}
+
+.chartHeadRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.chartTitle {
+  margin: 0;
+  font-family: 'Figtree', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: #000000;
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.legendItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #6b6459;
+}
+
+.legendDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.barChart {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.barRow {
+  display: grid;
+  grid-template-columns: 110px 1fr 40px;
+  align-items: center;
+  gap: 12px;
+}
+
+.barLabel {
+  font-size: 13px;
+  font-weight: 600;
+  color: #000000;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.barTrack {
+  width: 100%;
+  height: 14px;
+  border-radius: 4px;
+  background: #f3f0ea;
+  overflow: hidden;
+}
+
+.barFill {
+  height: 100%;
+  border-radius: 0 4px 4px 0;
+  transition: width 0.3s ease, filter 0.15s ease;
+}
+
+.barFill:hover {
+  filter: brightness(0.92);
+}
+
+.barValue {
+  font-size: 12px;
+  font-weight: 700;
+  color: #6b6459;
+  text-align: right;
+}
+
+/* ── Empty state ────────────────────────────────────────────────────── */
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 64px 24px;
+  border: 1px dashed #ede9e1;
+  border-radius: 20px;
+}
+
+.emptyIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 16px;
+  border-radius: 50%;
+  background: #fdfbf8;
+  color: #a39c8a;
+}
+
+.emptyTitle {
+  margin: 0 0 6px;
+  font-family: 'Figtree', sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  color: #000000;
+}
+
+.emptySubtitle {
+  margin: 0 0 20px;
+  max-width: 320px;
+  font-size: 14px;
+  color: #6b6459;
+}
+
+.emptyButton {
+  padding: 12px 22px;
+  border: none;
+  border-radius: 999px;
+  background: #ff3f00;
+  color: #ffffff;
+  font-family: 'Figtree', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.emptyButton:hover {
+  background: #ff7f11;
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 16px 20px;
+  }
+
+  .content {
+    padding: 32px 16px;
+  }
+
+  .titleRow {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
+
+  .actionsRight {
+    justify-content: space-between;
+  }
+
+  .cardGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .barRow {
+    grid-template-columns: 72px 1fr 34px;
+    gap: 8px;
+  }
+}

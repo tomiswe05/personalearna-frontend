@@ -1,0 +1,376 @@
+.page {
+  min-height: 100svh;
+  background: #fffffc;
+  font-family: 'Figtree', sans-serif;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 20px 32px;
+  border-bottom: 1px solid #ede9e1;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #ff3f00;
+}
+
+.backRow {
+  padding: 20px 32px 0;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: none;
+  background: none;
+  padding: 0;
+  font-family: 'Figtree', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  color: #6b6459;
+}
+
+.backLink:hover {
+  color: #000000;
+}
+
+.content {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 32px 24px 48px;
+}
+
+/* ── Step tracker ──────────────────────────────────────────────────── */
+
+.tracker {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.trackerStep {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.trackerLine {
+  flex: 1;
+  height: 2px;
+  margin-top: 15px;
+  background: #ede9e1;
+  transition: background 0.3s ease;
+}
+
+.trackerLineDone {
+  background: #ff3f00;
+}
+
+.trackerCircle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid #ede9e1;
+  background: #ffffff;
+  color: #a39c8a;
+  font-weight: 700;
+  font-size: 13px;
+  transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease, transform 0.2s ease;
+}
+
+.trackerCircleActive {
+  border-color: #ff3f00;
+  background: #ff3f00;
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+.trackerCircleDone {
+  border-color: #ff3f00;
+  background: #ff3f00;
+  color: #ffffff;
+}
+
+.trackerLabel {
+  font-size: 11px;
+  font-weight: 600;
+  color: #a39c8a;
+  text-align: center;
+  max-width: 76px;
+  transition: color 0.25s ease;
+}
+
+.trackerLabelActive {
+  color: #000000;
+}
+
+/* ── Step content ──────────────────────────────────────────────────── */
+
+.stepWrap {
+  overflow: hidden;
+}
+
+.stepForward {
+  animation: slideInForward 0.32s ease;
+}
+
+.stepBack {
+  animation: slideInBack 0.32s ease;
+}
+
+@keyframes slideInForward {
+  from {
+    opacity: 0;
+    transform: translateX(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInBack {
+  from {
+    opacity: 0;
+    transform: translateX(-24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.stepTitle {
+  margin: 0 0 6px;
+  font-family: 'Figtree', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  color: #000000;
+}
+
+.stepSubtitle {
+  margin: 0 0 24px;
+  font-size: 14px;
+  color: #6b6459;
+}
+
+/* ── Option cards ──────────────────────────────────────────────────── */
+
+.optionGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.optionCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px 18px;
+  border: 1.5px solid #ede9e1;
+  border-radius: 14px;
+  background: #ffffff;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background 0.2s ease, transform 0.15s ease;
+}
+
+.optionCard:hover {
+  border-color: #d9d2c4;
+  transform: translateY(-1px);
+}
+
+.optionCardSelected {
+  border-color: #ff3f00;
+  background: #fff6f2;
+  animation: pulse 0.3s ease;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.03);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.radioDot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  border-radius: 50%;
+  border: 1.5px solid #d9d2c4;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.radioDotSelected {
+  border-color: #ff3f00;
+  background: #ff3f00;
+}
+
+.radioDotInner {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ffffff;
+  transform: scale(0);
+  transition: transform 0.2s ease;
+}
+
+.radioDotSelected .radioDotInner {
+  transform: scale(1);
+}
+
+.optionLabel {
+  margin: 0 0 2px;
+  font-weight: 700;
+  font-size: 14px;
+  color: #000000;
+}
+
+.optionDescription {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #6b6459;
+}
+
+/* ── Additional preferences step ───────────────────────────────────── */
+
+.textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1.5px solid #ede9e1;
+  background: #fffffc;
+  font-family: 'Figtree', sans-serif;
+  font-size: 14px;
+  color: #000000;
+  outline: none;
+  resize: vertical;
+  min-height: 120px;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.textarea::placeholder {
+  color: #a39c8a;
+}
+
+.textarea:focus {
+  border-color: #ff7f11;
+  background: #ffffff;
+}
+
+/* ── Nav row ───────────────────────────────────────────────────────── */
+
+.navRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.helperText {
+  margin: 0;
+  font-size: 12px;
+  color: #a39c8a;
+}
+
+.navButtons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+}
+
+.navArrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border: none;
+  border-radius: 50%;
+  background: #ede9e1;
+  color: #a39c8a;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease;
+}
+
+.navArrow:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.navArrowPrimary {
+  background: #ff3f00;
+  color: #ffffff;
+}
+
+.navArrowPrimary:hover:not(:disabled) {
+  background: #ff7f11;
+  transform: scale(1.05);
+}
+
+.finishButton {
+  padding: 13px 26px;
+  border: none;
+  border-radius: 999px;
+  background: #ff3f00;
+  color: #ffffff;
+  font-family: 'Figtree', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background 0.15s ease;
+}
+
+.finishButton:hover {
+  background: #ff7f11;
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 16px 20px;
+  }
+
+  .backRow {
+    padding: 16px 20px 0;
+  }
+
+  .optionGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .trackerLabel {
+    display: none;
+  }
+
+  .navRow {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  .navButtons {
+    margin-left: 0;
+    justify-content: center;
+  }
+}
