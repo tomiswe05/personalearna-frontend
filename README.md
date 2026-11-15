@@ -30,3 +30,8 @@ If you are developing a production application, we recommend enabling type-aware
 ```
 
 See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+
+Just checking if I can push to this repo.
+Thanks for all you do Tomisin!
+
+Not sure that got committed, so trying again with this addition to my own branch.
