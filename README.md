@@ -33,3 +33,5 @@ See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rule
 
 Just checking if I can push to this repo.
 Thanks for all you do Tomisin!
+
+Not sure that got committed, so trying again with this addition to my own branch.
